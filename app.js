@@ -20,6 +20,10 @@ try{
 }
 }
 
+app.get('/',(req,res)=>{
+  res.send('welcome')
+})
+
 app.use ('/perfumery' , PerfumeryRouter)
 
 
