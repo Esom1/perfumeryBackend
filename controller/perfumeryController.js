@@ -34,6 +34,11 @@ const specific_post = async (req,res)=>{
   }
 };
 
+const get_category = async (req, res) => {
+  const getCategory = await PERFUMERY.find({ category: req.params.category });
+  res.json(getCategory);
+};
+
 const delete_post = async (req,res)=>{
   try{
     const deletePost = await PERFUMERY.findByIdAndDelete({_id:req.params.postId})
@@ -58,4 +63,5 @@ module.exports ={
   specific_post,
   delete_post,
   update_post,
+  get_category,
 }
