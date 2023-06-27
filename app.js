@@ -3,6 +3,10 @@ const app = express ();
 const mongoose = require ('mongoose');
 const PerfumeryRouter = require ('./router/perfumeryRouter.js')
 const port = process.env.port || 2020
+const cors = require('cors');
+
+
+app.use(cors());
 
 require ('dotenv').config();
 
